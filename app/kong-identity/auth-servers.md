@@ -86,6 +86,29 @@ rows:
 {% endtable %}
 <!--vale on-->
 
+## Limitations
+
+The following limits apply to {{site.identity}} authorization servers:
+
+<!--vale off-->
+{% table %}
+columns:
+  - title: Limit
+    key: limit
+  - title: Value
+    key: value
+rows:
+  - limit: Requests per second (TPS)
+    value: "100 transactions per second (TPS) per {{site.konnect_short_name}} region."
+  - limit: Auth servers
+    value: "50 auth servers per {{site.konnect_short_name}} region."
+  - limit: Clients per auth server
+    value: "5,000 clients per auth server."
+  - limit: Access tokens
+    value: "No limit for {{site.konnect_short_name}} Enterprise. Konnect Plus is limited to 10 million tokens per month."
+{% endtable %}
+<!--vale on-->
+
 ## {{site.identity}} client credential authentication flow
 
 The following diagram shows how authentication works with {{site.identity}}:
@@ -547,9 +570,6 @@ rows:
 For more information, see the [Principals reference](/identity/principals/).
 
 ## Create an auth server, claim, and client in {{site.identity}}
-
-{:.warning}
-> You are limited to 50 auth servers per {{site.konnect_short_name}} region.
 
 To configure {{site.identity}}, do the following:
 
