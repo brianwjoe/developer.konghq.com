@@ -498,21 +498,8 @@ flowchart TB
     SearchStrict --> Return
 {% endmermaid %}
 
-### Konnect API
+### Ingest content
 
-Use the [Konnect API](/ai-gateway/policies/ai-rag-injector/api/) to ingest content with metadata and collection assignments.
+{% include ai-gateway/rag-injection.md %}
 
-- Ingest chunk:
-
-  ```bash
-  POST /ai-rag-injector/{pluginID}/ingest_chunk
-  {"content": "...", "metadata": {"collection": "finance-reports", ...}}
-  ```
-
-- Lookup chunks:
-
-  ```bash
-  POST /ai-rag-injector/{pluginID}/lookup_chunks
-  {"prompt": "...", "collection": "finance-reports", "filters": {...}}
-  ```
 {% include_cached md/ai-gateway/v2/ai-vector-db.md %}
